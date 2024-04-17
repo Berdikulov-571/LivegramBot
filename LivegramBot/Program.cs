@@ -1,6 +1,5 @@
 ﻿using Telegram.Bot;
 using Telegram.Bot.Args;
-using Telegram.Bot.Types;
 
 namespace LivegramBot
 {
@@ -30,13 +29,13 @@ namespace LivegramBot
             if (text == "/start")
             {
                 await _botClient.SendTextMessageAsync(e.Message.Chat.Id, "Assalomu aleykum !\r\n\r\nBo't bo'yicha qanday savol taklif yoki shikoyatingiz bo'lsa bizga bemalol yo'llashingiz mumkin");
-                
+
                 Console.WriteLine($"Connected user: {e.Message.Chat.Username}");
             }
-            else if(e.Message.Chat.Id != chatId)
+            else if (e.Message.Chat.Id != chatId)
             {
                 await _botClient.SendTextMessageAsync(e.Message.Chat.Id, "Sizning habaringiz muvaffaqiyatli yuborildi");
-                await _botClient.ForwardMessageAsync(chatId, e.Message.Chat.Id,e.Message.MessageId);
+                await _botClient.ForwardMessageAsync(chatId, e.Message.Chat.Id, e.Message.MessageId);
             }
             else if (e.Message.ReplyToMessage != null && e.Message.ReplyToMessage.ForwardFrom != null)
             {
@@ -46,5 +45,3 @@ namespace LivegramBot
         }
     }
 }
-
-//1726806055
