@@ -1,0 +1,1 @@
+long tipidagi chatId o'zgaruvchisiga o'zingizning telegram chatId yingizni yozib qo'yasiz chunki telegramBot jo'natilgan habarlarni qaysi userga Telegram bo't orqali jo'natishini bilish kerak va telegram bot tokenni ham qo'yasiz 
